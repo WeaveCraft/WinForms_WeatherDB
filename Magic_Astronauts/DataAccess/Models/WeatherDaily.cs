@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Magic_Astronauts.DataAccess.Models
 {
@@ -14,11 +9,8 @@ namespace Magic_Astronauts.DataAccess.Models
         // SelectDate shows average temp for a chosen day
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
         public DateTime SelectDate { get; set; }
-
         public double AverageHumidity { get; set; }
-
         public double AverageTemperature { get; set; }
-
         public string Location { get; set; }
     }
 }

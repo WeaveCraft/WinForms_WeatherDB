@@ -1,4 +1,5 @@
 ﻿using Magic_Astronauts.Core;
+using Magic_Astronauts.DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Magic_Astronauts.DataAccess;
@@ -7,8 +8,9 @@ public class WeatherDbContext : DbContext
 {
     public DbSet<Weather> Weathers { get; set; } //Samma som CsvModels. Ish.
     public DbSet<CsvModel> CsvModels { get; set; } //Denna är detsamma som Weathers table. Vi kan ta bort Weathers eller CsvModels.
-    public DbSet<DailyCalc> WeatherDailies { get; set; }
-    public DbSet<MouldCalc> MouldRisks { get; set; }
+    public DbSet<WeatherDaily> WeatherDailies { get; set; }
+    public DbSet<MouldRisk> MouldRisks { get; set; }
+    public DbSet<MeteoroSeason> MeteroSeasons { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

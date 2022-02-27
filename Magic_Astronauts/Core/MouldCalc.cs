@@ -49,7 +49,7 @@ namespace Magic_Astronauts.Core
                 {
                     for (int i = 0; i < 4; i++)
                     {
-                        if (humid < MouldInfo._MouldTable[temp, i])
+                        if (humid < MouldData._MouldTable[temp, i])
                         {
                             mouldRisk = i - 1;
                             break;

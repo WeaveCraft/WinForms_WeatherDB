@@ -1,16 +1,6 @@
-﻿//Mögel Risk Definition
-//        --  http://www.penthon.com/vanliga-fragor/faq/vad-innebar-mogelindex/
-//        --temperatur från 0 till 50 grader
-//       -- fukt under 78% för torrt
-
-//#  0 = No risk
-//#  1 = Mould growth possible after > 8 weeks
-//#  2 = Mould growth after 4-8 weeks
-//#  3 = Mould growth after 0-4 weeks
-
-namespace Magic_Astronauts.DataAccess
+﻿namespace Magic_Astronauts.DataAccess
 {
-    public class MouldInfo
+    public class MouldData
     {
         public static int[,] _MouldTable = new int[,]
            {

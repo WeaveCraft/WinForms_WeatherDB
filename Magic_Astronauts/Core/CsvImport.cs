@@ -69,5 +69,12 @@
             }
             return SortedList;
         }
+
+        public static bool FindData()
+        {
+            WeatherDbContext data = new WeatherDbContext();
+            var find = data.WeatherDailies.Any();
+            return find;
+        }
     }
 }

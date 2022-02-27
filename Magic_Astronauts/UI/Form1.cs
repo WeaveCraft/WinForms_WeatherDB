@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Magic_Astronauts.DataAccess.Models;
 
 namespace Magic_Astronauts;
 
@@ -137,7 +138,7 @@ public partial class Form1 : Form
             DataImport.PopulateDatabase(_context);
             _context.SaveChanges();
         }
-        MessageBox.Show("The Database now has fresh data to be viewed!", "Save Complete");
+        MessageBox.Show("The Database Has Data To Be Viewed", "Save Complete");
     }
 
     private void btnShowAvg_Click(object sender, EventArgs e)
@@ -170,6 +171,83 @@ public partial class Form1 : Form
         dataAdapter.Fill(dbData);
         dataGridView1.ReadOnly = true;
         dataGridView1.DataSource = dbData.Tables[0];
+    }
+
+    private void btnShow_Click(object sender, EventArgs e)
+    {
+        MeteoroSeason display = new();
+
+        DateTime autumnCheck = new DateTime(2016, 10, 01);
+        DateTime winterCheck = new DateTime(2016, 10, 01);
+
+        var Autumn = MeteoroCalc.AutumnDate(_context, autumnCheck);
+        var Winter = MeteoroCalc.WinterDate(_context, winterCheck);
+
+        if (Autumn == null)
+        {
+            display.AutumnStart = "Autumn never came in 2016";
+        }
+        if (Winter == null)
+        {
+            display.WinterStart = "Winter never came in 2016";
+        }
+        if (Autumn != null)
+        {
+            display.AutumnStart = "Meteorological Autumn started: " + Autumn;
+        }
+        if (Winter != null)
+        {
+            display.WinterStart = "Meteorological Winter started: " + Winter;
+        }
+        //display.AutumnDateTime = Autumn;
+        //display.WinterDateTime = Winter;
+
+        labelWinter.Text = display.WinterStart;
+        labelAutumn.Text = display.AutumnStart;
+        //DateTime autumnCheck = new DateTime(2016, 10, 01);
+        //DateTime winterCheck = new DateTime(2016, 10, 01);
+
+        //MeteoroCalc autumn = new();
+        //var autumnDate = MeteoroCalc.AutumnDate(_context, autumnCheck);
+        //labelAutumn.Text = autumnDate.ToString();
+
+        //MeteoroCalc winter = new();
+        //var winterDate = MeteoroCalc.WinterDate(_context, winterCheck);
+        //labelWinter.Text = winterDate.ToString();
+    }
+
+    private void InsideForm_Load(object sender, EventArgs e)
+    {
+        MeteoroSeason display = new();
+
+        DateTime autumnCheck = new DateTime(2016, 10, 01);
+        DateTime winterCheck = new DateTime(2016, 10, 01);
+
+        var Autumn = MeteoroCalc.AutumnDate(_context, autumnCheck);
+        var Winter = MeteoroCalc.WinterDate(_context, winterCheck);
+
+        if (Autumn == null)
+        {
+            display.AutumnStart = "Autumn never came in 2016";
+        }
+        if (Winter == null)
+        {
+            display.WinterStart = "Winter never came in 2016";
+        }
+        if (Autumn != null)
+        {
+            display.AutumnStart = "Meteorological Autumn started: " + Autumn;
+        }
+        if (Winter != null)
+        {
+            display.WinterStart = "Meteorological Winter started: " + Winter;
+        }
+
+        labelWinter.Text = display.WinterStart;
+        labelAutumn.Text = display.AutumnStart;
+        
+
+        
     }
 }
 
