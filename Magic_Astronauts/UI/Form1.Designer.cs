@@ -34,11 +34,7 @@
             this.placeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tempDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.humidityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Browse_btn = new System.Windows.Forms.Button();
-            this.txtFileName = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.load_Btn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SelectDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +42,6 @@
             this.MouldIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mouldRiskBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clear_Btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMoldRisk = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -61,11 +56,9 @@
             this.mouldRiskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listView1 = new System.Windows.Forms.ListView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.insideCheckBox = new System.Windows.Forms.CheckBox();
-            this.outsideCheckBox = new System.Windows.Forms.CheckBox();
-            this.btnShow = new System.Windows.Forms.Button();
             this.labelWinter = new System.Windows.Forms.Label();
             this.labelAutumn = new System.Windows.Forms.Label();
+            this.btnMeteoro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouldRiskBindingSource1)).BeginInit();
@@ -109,57 +102,9 @@
             this.humidityDataGridViewTextBoxColumn.Name = "humidityDataGridViewTextBoxColumn";
             this.humidityDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Browse_btn
-            // 
-            this.Browse_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Browse_btn.Location = new System.Drawing.Point(265, 9);
-            this.Browse_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Browse_btn.Name = "Browse_btn";
-            this.Browse_btn.Size = new System.Drawing.Size(122, 29);
-            this.Browse_btn.TabIndex = 1;
-            this.Browse_btn.Text = "Browse";
-            this.Browse_btn.UseVisualStyleBackColor = true;
-            this.Browse_btn.Click += new System.EventHandler(this.Browse_btn_Click);
-            // 
-            // txtFileName
-            // 
-            this.txtFileName.Location = new System.Drawing.Point(406, 15);
-            this.txtFileName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(364, 23);
-            this.txtFileName.TabIndex = 4;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.saveBtn.Location = new System.Drawing.Point(647, 532);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(122, 29);
-            this.saveBtn.TabIndex = 7;
-            this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
-            // load_Btn
-            // 
-            this.load_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.load_Btn.Location = new System.Drawing.Point(265, 532);
-            this.load_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.load_Btn.Name = "load_Btn";
-            this.load_Btn.Size = new System.Drawing.Size(122, 29);
-            this.load_Btn.TabIndex = 8;
-            this.load_Btn.Text = "Load";
-            this.load_Btn.UseVisualStyleBackColor = true;
-            this.load_Btn.Click += new System.EventHandler(this.load_Btn_Click);
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Magic_Astronauts.Core.Weather);
             // 
             // dataGridView1
             // 
@@ -209,17 +154,6 @@
             // 
             this.mouldRiskBindingSource1.DataSource = typeof(Magic_Astronauts.Core.MouldCalc);
             // 
-            // clear_Btn
-            // 
-            this.clear_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.clear_Btn.Location = new System.Drawing.Point(458, 532);
-            this.clear_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clear_Btn.Name = "clear_Btn";
-            this.clear_Btn.Size = new System.Drawing.Size(122, 29);
-            this.clear_Btn.TabIndex = 10;
-            this.clear_Btn.Text = "Clear";
-            this.clear_Btn.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -236,11 +170,11 @@
             // 
             // btnMoldRisk
             // 
-            this.btnMoldRisk.Location = new System.Drawing.Point(52, 33);
+            this.btnMoldRisk.Location = new System.Drawing.Point(-1, 33);
             this.btnMoldRisk.Name = "btnMoldRisk";
-            this.btnMoldRisk.Size = new System.Drawing.Size(75, 23);
+            this.btnMoldRisk.Size = new System.Drawing.Size(223, 23);
             this.btnMoldRisk.TabIndex = 12;
-            this.btnMoldRisk.Text = "Mold Risk";
+            this.btnMoldRisk.Text = "Display Mold Risk";
             this.btnMoldRisk.UseVisualStyleBackColor = true;
             this.btnMoldRisk.Click += new System.EventHandler(this.btnMoldRisk_Click);
             // 
@@ -290,21 +224,21 @@
             // 
             // btnShowAvg
             // 
-            this.btnShowAvg.Location = new System.Drawing.Point(52, 91);
+            this.btnShowAvg.Location = new System.Drawing.Point(3, 91);
             this.btnShowAvg.Name = "btnShowAvg";
-            this.btnShowAvg.Size = new System.Drawing.Size(75, 23);
+            this.btnShowAvg.Size = new System.Drawing.Size(219, 23);
             this.btnShowAvg.TabIndex = 13;
-            this.btnShowAvg.Text = "Show AVG";
+            this.btnShowAvg.Text = "Show Average Data";
             this.btnShowAvg.UseVisualStyleBackColor = true;
             this.btnShowAvg.Click += new System.EventHandler(this.btnShowAvg_Click);
             // 
             // btnnewAVG
             // 
-            this.btnnewAVG.Location = new System.Drawing.Point(52, 62);
+            this.btnnewAVG.Location = new System.Drawing.Point(3, 62);
             this.btnnewAVG.Name = "btnnewAVG";
-            this.btnnewAVG.Size = new System.Drawing.Size(75, 23);
+            this.btnnewAVG.Size = new System.Drawing.Size(219, 23);
             this.btnnewAVG.TabIndex = 12;
-            this.btnnewAVG.Text = "AVG";
+            this.btnnewAVG.Text = "Get Data To Database";
             this.btnnewAVG.UseVisualStyleBackColor = true;
             this.btnnewAVG.Click += new System.EventHandler(this.btnnewAVG_Click);
             // 
@@ -337,55 +271,31 @@
             this.dateTimePicker1.TabIndex = 13;
             this.dateTimePicker1.Value = new System.DateTime(2016, 11, 30, 0, 0, 0, 0);
             // 
-            // insideCheckBox
-            // 
-            this.insideCheckBox.AutoSize = true;
-            this.insideCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.insideCheckBox.Location = new System.Drawing.Point(366, 320);
-            this.insideCheckBox.Name = "insideCheckBox";
-            this.insideCheckBox.Size = new System.Drawing.Size(57, 19);
-            this.insideCheckBox.TabIndex = 14;
-            this.insideCheckBox.Text = "Inside";
-            this.insideCheckBox.UseVisualStyleBackColor = false;
-            // 
-            // outsideCheckBox
-            // 
-            this.outsideCheckBox.AutoSize = true;
-            this.outsideCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.outsideCheckBox.Location = new System.Drawing.Point(561, 320);
-            this.outsideCheckBox.Name = "outsideCheckBox";
-            this.outsideCheckBox.Size = new System.Drawing.Size(67, 19);
-            this.outsideCheckBox.TabIndex = 15;
-            this.outsideCheckBox.Text = "Outside";
-            this.outsideCheckBox.UseVisualStyleBackColor = false;
-            // 
-            // btnShow
-            // 
-            this.btnShow.Location = new System.Drawing.Point(429, 316);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(126, 23);
-            this.btnShow.TabIndex = 16;
-            this.btnShow.Text = "Show";
-            this.btnShow.UseVisualStyleBackColor = true;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
             // labelWinter
             // 
             this.labelWinter.AutoSize = true;
             this.labelWinter.Location = new System.Drawing.Point(366, 440);
             this.labelWinter.Name = "labelWinter";
-            this.labelWinter.Size = new System.Drawing.Size(131, 15);
+            this.labelWinter.Size = new System.Drawing.Size(0, 15);
             this.labelWinter.TabIndex = 17;
-            this.labelWinter.Text = "Meteorological Winter: ";
             // 
             // labelAutumn
             // 
             this.labelAutumn.AutoSize = true;
             this.labelAutumn.Location = new System.Drawing.Point(366, 485);
             this.labelAutumn.Name = "labelAutumn";
-            this.labelAutumn.Size = new System.Drawing.Size(140, 15);
+            this.labelAutumn.Size = new System.Drawing.Size(0, 15);
             this.labelAutumn.TabIndex = 18;
-            this.labelAutumn.Text = "Meteorological Autumn: ";
+            // 
+            // btnMeteoro
+            // 
+            this.btnMeteoro.Location = new System.Drawing.Point(429, 481);
+            this.btnMeteoro.Name = "btnMeteoro";
+            this.btnMeteoro.Size = new System.Drawing.Size(121, 23);
+            this.btnMeteoro.TabIndex = 20;
+            this.btnMeteoro.Text = "Meteorology";
+            this.btnMeteoro.UseVisualStyleBackColor = true;
+            this.btnMeteoro.Click += new System.EventHandler(this.btnMeteoro_Click);
             // 
             // Form1
             // 
@@ -393,20 +303,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 571);
+            this.Controls.Add(this.btnMeteoro);
             this.Controls.Add(this.labelAutumn);
             this.Controls.Add(this.labelWinter);
-            this.Controls.Add(this.btnShow);
-            this.Controls.Add(this.outsideCheckBox);
-            this.Controls.Add(this.insideCheckBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.clear_Btn);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.load_Btn);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.txtFileName);
-            this.Controls.Add(this.Browse_btn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -424,20 +327,15 @@
         }
 
         #endregion
-        private Button Browse_btn;
-        private TextBox txtFileName;
         private OpenFileDialog openFileDialog1;
         private BindingSource weatherBindingSource;
-        private Button saveBtn;
         private DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn placeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tempDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn humidityDataGridViewTextBoxColumn;
-        private Button load_Btn;
         private BindingSource bindingSource1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
-        private Button clear_Btn;
         private Panel panel1;
         private Button btnnewAVG;
         private Button btnShowAvg;
@@ -458,10 +356,8 @@
         private Button btnMoldRisk;
         private ListView listView1;
         private DateTimePicker dateTimePicker1;
-        private CheckBox insideCheckBox;
-        private CheckBox outsideCheckBox;
-        private Button btnShow;
         private Label labelWinter;
         private Label labelAutumn;
+        private Button btnMeteoro;
     }
 }
