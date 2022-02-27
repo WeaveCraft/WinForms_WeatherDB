@@ -5,7 +5,7 @@ namespace Magic_Astronauts.DataAccess;
 
 public class WeatherDbContext : DbContext
 {
-    public DbSet<Weather> Weathers { get; set; }
+    public DbSet<Weather> Weathers { get; set; } //Samma som CsvModels. Ish.
     public DbSet<CsvModel> CsvModels { get; set; } //Denna är detsamma som Weathers table. Vi kan ta bort Weathers eller CsvModels.
     public DbSet<AverageCalc> WeatherDailies { get; set; }
     public DbSet<MouldData> MouldRisks { get; set; }
