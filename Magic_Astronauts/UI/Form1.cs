@@ -18,7 +18,7 @@ public partial class Form1 : Form
     WeatherDbContext _context = new WeatherDbContext();
     IList<Weather> weatherData = new List<Weather>();
     IList<string> lineData = new List<string>();
-    IList<AverageCalc> _avgdata = new List<AverageCalc>();
+    IList<DailyCalc> _avgdata = new List<DailyCalc>();
     //Regex filter = new Regex(@"^[\d{4}-\w,:.]");
     public Form1()
     {
@@ -158,7 +158,7 @@ public partial class Form1 : Form
 
     private void btnMoldRisk_Click(object sender, EventArgs e)
     {
-        var selectQuery = "SELECT SelectDate, Location, RiskForMould, MouldIndex FROM MouldRisk";
+        var selectQuery = "SELECT SelectDate, Location, RiskForMould, MouldIndex FROM MouldRisks";
 
                         
 

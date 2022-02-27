@@ -9,12 +9,12 @@ namespace Magic_Astronauts.Core
             CsvImport.CsvBuilder(context);
             if (!context.WeatherDailies.Any())
             {
-                AverageCalc.PopulateAvgTempAndHumidity(context);
+                DailyCalc.PopulateAvgTempAndHumidity(context);
             }
             if (!context.MouldRisks.Any())
             {
-                MouldData.PopulateMouldRisk(context, "Ute");
-                MouldData.PopulateMouldRisk(context, "Inne");
+                MouldCalc.PopulateMouldRisk(context, "Ute");
+                MouldCalc.PopulateMouldRisk(context, "Inne");
             }
             context.SaveChanges();
         }

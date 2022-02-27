@@ -10,7 +10,7 @@
 
 namespace Magic_Astronauts.DataAccess
 {
-    public class MouldTable
+    public class MouldInfo
     {
         public static int[,] _MouldTable = new int[,]
            {

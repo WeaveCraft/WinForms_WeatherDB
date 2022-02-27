@@ -1,28 +1,16 @@
 ﻿using Magic_Astronauts.DataAccess;
-using System.ComponentModel.DataAnnotations;
+using Magic_Astronauts.DataAccess.Models;
 
 namespace Magic_Astronauts.Core
 {
-    public class AverageCalc
+    public class DailyCalc : WeatherDaily
     {
-        [Required]
-        public int Id { get; set; }
-        // SelectDate shows average temp for a chosen day
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
-        public DateTime SelectDate { get; set; }
-
-        public double AverageHumidity { get; set; }
-
-        public double AverageTemperature { get; set; }
-
-        public string Location { get; set; }
-
         //PopulateAvgTempAndHumidity populates WeatherDailies-table in DB.
         public static void PopulateAvgTempAndHumidity(WeatherDbContext context)
         {
             string Place = "Ute";
             bool running = true;
-            List<AverageCalc> AvgTempAsList = new List<AverageCalc>();
+            List<DailyCalc> AvgTempAsList = new List<DailyCalc>();
             while (running)
             {
                 DateTime StartDate = new DateTime(2016, 10, 01);
@@ -64,7 +52,7 @@ namespace Magic_Astronauts.Core
                         double avgTemp = Math.Round((total2 / counterListTemp.Count()), 2);
 
                         // Send back the values of our calculations.
-                        AverageCalc avgTemps = new AverageCalc
+                        DailyCalc avgTemps = new DailyCalc
                         {
                             Location = Place,
                             AverageTemperature = avgTemp,

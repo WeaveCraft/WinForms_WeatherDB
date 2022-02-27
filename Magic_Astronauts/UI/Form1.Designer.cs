@@ -215,7 +215,7 @@
             // 
             // avgTempAndHumidityBindingSource
             // 
-            this.avgTempAndHumidityBindingSource.DataSource = typeof(Magic_Astronauts.Core.AverageCalc);
+            this.avgTempAndHumidityBindingSource.DataSource = typeof(Magic_Astronauts.Core.DailyCalc);
             // 
             // btnShowAvg
             // 
@@ -239,11 +239,11 @@
             // 
             // mouldRiskBindingSource
             // 
-            this.mouldRiskBindingSource.DataSource = typeof(Magic_Astronauts.Core.MouldData);
+            this.mouldRiskBindingSource.DataSource = typeof(Magic_Astronauts.Core.MouldCalc);
             // 
             // avgTempAndHumidityBindingSource1
             // 
-            this.avgTempAndHumidityBindingSource1.DataSource = typeof(Magic_Astronauts.Core.AverageCalc);
+            this.avgTempAndHumidityBindingSource1.DataSource = typeof(Magic_Astronauts.Core.DailyCalc);
             // 
             // selectDateDataGridViewTextBoxColumn
             // 
@@ -271,7 +271,7 @@
             // 
             // mouldRiskBindingSource1
             // 
-            this.mouldRiskBindingSource1.DataSource = typeof(Magic_Astronauts.Core.MouldData);
+            this.mouldRiskBindingSource1.DataSource = typeof(Magic_Astronauts.Core.MouldCalc);
             // 
             // SelectDate
             // 

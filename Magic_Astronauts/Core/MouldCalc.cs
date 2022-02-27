@@ -1,17 +1,10 @@
 ﻿using Magic_Astronauts.DataAccess;
-using System.ComponentModel.DataAnnotations;
+using Magic_Astronauts.DataAccess.Models;
 
 namespace Magic_Astronauts.Core
 {
-    public class MouldData
+    public class MouldCalc : MouldRisk
     {
-        [Required]
-        public int Id { get; set; }
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
-        public DateTime SelectDate { get; set; }
-        public string Location { get; set; }
-        public string RiskForMould { get; set; } //Information about the mould scale (0-3)
-        public int MouldIndex { get; set; } //What level is the mould risk at (from scale 0-3)
         // Method that adds a message for each MouldIndex to our DB.
         public static string MouldText(string mould)
         {
@@ -56,7 +49,7 @@ namespace Magic_Astronauts.Core
                 {
                     for (int i = 0; i < 4; i++)
                     {
-                        if (humid < MouldTable._MouldTable[temp, i])
+                        if (humid < MouldInfo._MouldTable[temp, i])
                         {
                             mouldRisk = i - 1;
                             break;
@@ -71,7 +64,7 @@ namespace Magic_Astronauts.Core
                 // Write out our calculations together with our string for mould level -> MouldRisk + MouldText.
 
                 string MouldFacts = MouldText(mouldRisk.ToString());
-                var _MouldRisk = new MouldData { SelectDate = day, RiskForMould = MouldFacts, Location = position, MouldIndex = mouldRisk };
+                var _MouldRisk = new MouldCalc { SelectDate = day, RiskForMould = MouldFacts, Location = position, MouldIndex = mouldRisk };
                 context.MouldRisks.Add(_MouldRisk);
             }
             context.SaveChanges();
