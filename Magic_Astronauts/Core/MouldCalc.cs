@@ -11,19 +11,19 @@ namespace Magic_Astronauts.Core
             double risk = double.Parse(mould);
             if (risk == 0)
             {
-                mould = "Ingen Risk För Mögel";
+                mould = "No Mould Risk";
             }
             if (risk == 1)
             {
-                mould = "Möjlig mögel växt efter 8 veckor";
+                mould = "Possible Mould Risk After 8 Weeks";
             }
             if (risk == 2)
             {
-                mould = "Mögel växt efter 4 till 8 veckor";
+                mould = "Mould Risk Between 4-8 Weeks";
             }
             if (risk == 3)
             {
-                mould = "Hög risk för mögel växt inom 4 veckor";
+                mould = "Mould Risk Within 4 Weeks";
             }
             return mould;
         }
