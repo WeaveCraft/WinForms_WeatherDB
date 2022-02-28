@@ -88,6 +88,11 @@ private void btnMeteoro_Click(object sender, EventArgs e)
 
     private void btnDateTimePicker_Click(object sender, EventArgs e)
     {
+        // This should display average temp & hum from a selected day by user. Via dateTimePicker.
+    }
 
+    private void outsideForm_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        //The selected day should be displayed here.
     }
 }

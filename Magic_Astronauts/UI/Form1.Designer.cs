@@ -45,7 +45,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDateTimePicker = new System.Windows.Forms.Button();
             this.btnnewAVG = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.outsideForm = new System.Windows.Forms.ListView();
             this.btnMeteoro = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnMoldRisk = new System.Windows.Forms.Button();
@@ -117,12 +117,12 @@
             this.MouldIndex,
             this.locationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.mouldRiskBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(265, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(265, 32);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(489, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(489, 236);
             this.dataGridView1.TabIndex = 9;
             // 
             // SelectDate
@@ -161,7 +161,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnDateTimePicker);
             this.panel1.Controls.Add(this.btnnewAVG);
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.outsideForm);
             this.panel1.Controls.Add(this.btnMeteoro);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
@@ -190,15 +190,16 @@
             this.btnnewAVG.UseVisualStyleBackColor = true;
             this.btnnewAVG.Click += new System.EventHandler(this.btnnewAVG_Click);
             // 
-            // listView1
+            // outsideForm
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listView1.Location = new System.Drawing.Point(3, 128);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(210, 97);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.outsideForm.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.outsideForm.Location = new System.Drawing.Point(3, 128);
+            this.outsideForm.Name = "outsideForm";
+            this.outsideForm.Size = new System.Drawing.Size(210, 97);
+            this.outsideForm.TabIndex = 12;
+            this.outsideForm.UseCompatibleStateImageBehavior = false;
+            this.outsideForm.View = System.Windows.Forms.View.Details;
+            this.outsideForm.SelectedIndexChanged += new System.EventHandler(this.outsideForm_SelectedIndexChanged);
             // 
             // btnMeteoro
             // 
@@ -366,7 +367,7 @@
         private BindingSource avgTempAndHumidityBindingSource1;
         private BindingSource mouldRiskBindingSource;
         private Button btnMoldRisk;
-        private ListView listView1;
+        private ListView outsideForm;
         private DateTimePicker dateTimePicker1;
         private Label labelWinter;
         private Label labelAutumn;
