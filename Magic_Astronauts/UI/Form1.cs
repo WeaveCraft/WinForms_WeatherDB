@@ -77,21 +77,26 @@ private void btnMeteoro_Click(object sender, EventArgs e)
 
         if (Autumn == null)
         {
-            display.AutumnStart = "Autumn never came in 2016 \n";
+            display.AutumnStart = "Autumn never came in 2016";
         }
         if (Winter == null)
         {
-            display.WinterStart = "Winter never came in 2016 \n";
+            display.WinterStart = "Winter never came in 2016";
         }
         if (Autumn != null)
         {
-            display.AutumnStart = "Meteorological Autumn started: " + " " + Autumn;
+            display.AutumnStart = "Meteorological Autumn started: " + Autumn;
         }
         if (Winter != null)
         {
-            display.WinterStart = "Meteorological Winter started: " + " " + Winter;
+            display.WinterStart = "Meteorological Winter started: " + Winter;
         }
 
-        MessageBox.Show(display.WinterStart + display.AutumnStart, "Meteorology Data");
+        MessageBox.Show(display.WinterStart + "\n" + display.AutumnStart, "Meteorology Data");
+    }
+
+    private void btnDateTimePicker_Click(object sender, EventArgs e)
+    {
+
     }
 }

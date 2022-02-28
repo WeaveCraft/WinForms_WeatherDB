@@ -43,6 +43,11 @@
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mouldRiskBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDateTimePicker = new System.Windows.Forms.Button();
+            this.btnnewAVG = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnMeteoro = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnMoldRisk = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.selectDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,14 +56,10 @@
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avgTempAndHumidityBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnShowAvg = new System.Windows.Forms.Button();
-            this.btnnewAVG = new System.Windows.Forms.Button();
             this.avgTempAndHumidityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mouldRiskBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelWinter = new System.Windows.Forms.Label();
             this.labelAutumn = new System.Windows.Forms.Label();
-            this.btnMeteoro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouldRiskBindingSource1)).BeginInit();
@@ -121,7 +122,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(504, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(489, 228);
             this.dataGridView1.TabIndex = 9;
             // 
             // SelectDate
@@ -158,21 +159,73 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnMoldRisk);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.btnShowAvg);
+            this.panel1.Controls.Add(this.btnDateTimePicker);
             this.panel1.Controls.Add(this.btnnewAVG);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.btnMeteoro);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 573);
             this.panel1.TabIndex = 11;
             // 
+            // btnDateTimePicker
+            // 
+            this.btnDateTimePicker.Location = new System.Drawing.Point(3, 99);
+            this.btnDateTimePicker.Name = "btnDateTimePicker";
+            this.btnDateTimePicker.Size = new System.Drawing.Size(210, 23);
+            this.btnDateTimePicker.TabIndex = 21;
+            this.btnDateTimePicker.Text = "Display Date Time Day";
+            this.btnDateTimePicker.UseVisualStyleBackColor = true;
+            this.btnDateTimePicker.Click += new System.EventHandler(this.btnDateTimePicker_Click);
+            // 
+            // btnnewAVG
+            // 
+            this.btnnewAVG.Location = new System.Drawing.Point(3, 4);
+            this.btnnewAVG.Name = "btnnewAVG";
+            this.btnnewAVG.Size = new System.Drawing.Size(219, 23);
+            this.btnnewAVG.TabIndex = 12;
+            this.btnnewAVG.Text = "Get Data To Database";
+            this.btnnewAVG.UseVisualStyleBackColor = true;
+            this.btnnewAVG.Click += new System.EventHandler(this.btnnewAVG_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.listView1.Location = new System.Drawing.Point(3, 128);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(210, 97);
+            this.listView1.TabIndex = 12;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // btnMeteoro
+            // 
+            this.btnMeteoro.Location = new System.Drawing.Point(3, 33);
+            this.btnMeteoro.Name = "btnMeteoro";
+            this.btnMeteoro.Size = new System.Drawing.Size(219, 23);
+            this.btnMeteoro.TabIndex = 20;
+            this.btnMeteoro.Text = "Display Meteorology";
+            this.btnMeteoro.UseVisualStyleBackColor = true;
+            this.btnMeteoro.Click += new System.EventHandler(this.btnMeteoro_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ButtonHighlight;
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 70);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2016, 11, 30, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2016, 10, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(210, 23);
+            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 11, 30, 0, 0, 0, 0);
+            // 
             // btnMoldRisk
             // 
-            this.btnMoldRisk.Location = new System.Drawing.Point(-1, 33);
+            this.btnMoldRisk.Location = new System.Drawing.Point(265, 12);
             this.btnMoldRisk.Name = "btnMoldRisk";
-            this.btnMoldRisk.Size = new System.Drawing.Size(223, 23);
+            this.btnMoldRisk.Size = new System.Drawing.Size(489, 23);
             this.btnMoldRisk.TabIndex = 12;
             this.btnMoldRisk.Text = "Display Mold Risk";
             this.btnMoldRisk.UseVisualStyleBackColor = true;
@@ -188,10 +241,10 @@
             this.AverageTemperature,
             this.Location});
             this.dataGridView2.DataSource = this.avgTempAndHumidityBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(-1, 120);
+            this.dataGridView2.Location = new System.Drawing.Point(265, 295);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(223, 381);
+            this.dataGridView2.Size = new System.Drawing.Size(489, 264);
             this.dataGridView2.TabIndex = 14;
             // 
             // selectDateDataGridViewTextBoxColumn
@@ -224,23 +277,13 @@
             // 
             // btnShowAvg
             // 
-            this.btnShowAvg.Location = new System.Drawing.Point(3, 91);
+            this.btnShowAvg.Location = new System.Drawing.Point(265, 273);
             this.btnShowAvg.Name = "btnShowAvg";
-            this.btnShowAvg.Size = new System.Drawing.Size(219, 23);
+            this.btnShowAvg.Size = new System.Drawing.Size(489, 23);
             this.btnShowAvg.TabIndex = 13;
-            this.btnShowAvg.Text = "Show Average Data";
+            this.btnShowAvg.Text = "Display Average Data";
             this.btnShowAvg.UseVisualStyleBackColor = true;
             this.btnShowAvg.Click += new System.EventHandler(this.btnShowAvg_Click);
-            // 
-            // btnnewAVG
-            // 
-            this.btnnewAVG.Location = new System.Drawing.Point(3, 62);
-            this.btnnewAVG.Name = "btnnewAVG";
-            this.btnnewAVG.Size = new System.Drawing.Size(219, 23);
-            this.btnnewAVG.TabIndex = 12;
-            this.btnnewAVG.Text = "Get Data To Database";
-            this.btnnewAVG.UseVisualStyleBackColor = true;
-            this.btnnewAVG.Click += new System.EventHandler(this.btnnewAVG_Click);
             // 
             // avgTempAndHumidityBindingSource
             // 
@@ -249,27 +292,6 @@
             // mouldRiskBindingSource
             // 
             this.mouldRiskBindingSource.DataSource = typeof(Magic_Astronauts.Core.MouldCalc);
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listView1.Location = new System.Drawing.Point(366, 340);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(262, 97);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ButtonHighlight;
-            this.dateTimePicker1.Location = new System.Drawing.Point(366, 291);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2016, 11, 30, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2016, 10, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(262, 23);
-            this.dateTimePicker1.TabIndex = 13;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 11, 30, 0, 0, 0, 0);
             // 
             // labelWinter
             // 
@@ -287,27 +309,17 @@
             this.labelAutumn.Size = new System.Drawing.Size(0, 15);
             this.labelAutumn.TabIndex = 18;
             // 
-            // btnMeteoro
-            // 
-            this.btnMeteoro.Location = new System.Drawing.Point(429, 481);
-            this.btnMeteoro.Name = "btnMeteoro";
-            this.btnMeteoro.Size = new System.Drawing.Size(121, 23);
-            this.btnMeteoro.TabIndex = 20;
-            this.btnMeteoro.Text = "Meteorology";
-            this.btnMeteoro.UseVisualStyleBackColor = true;
-            this.btnMeteoro.Click += new System.EventHandler(this.btnMeteoro_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(780, 571);
-            this.Controls.Add(this.btnMeteoro);
+            this.Controls.Add(this.btnShowAvg);
+            this.Controls.Add(this.btnMoldRisk);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.labelAutumn);
             this.Controls.Add(this.labelWinter);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -359,5 +371,6 @@
         private Label labelWinter;
         private Label labelAutumn;
         private Button btnMeteoro;
+        private Button btnDateTimePicker;
     }
 }
