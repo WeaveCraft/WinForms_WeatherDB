@@ -3,7 +3,6 @@ using Magic_Astronauts.DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Magic_Astronauts.DataAccess;
-
 public class WeatherDbContext : DbContext
 {
     //private readonly MeteoroSeason _meteoroContext;

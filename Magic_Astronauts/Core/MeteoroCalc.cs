@@ -1,9 +1,4 @@
 ﻿using Magic_Astronauts.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Magic_Astronauts.Core
 {

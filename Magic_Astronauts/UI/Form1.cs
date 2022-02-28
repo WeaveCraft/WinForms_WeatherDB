@@ -1,15 +1,7 @@
 using Magic_Astronauts.Core;
 using Magic_Astronauts.DataAccess;
 using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System.Configuration;
 using System.Data;
-using System.Globalization;
-using System.Text.RegularExpressions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Magic_Astronauts.DataAccess.Models;
 
 namespace Magic_Astronauts;
@@ -20,7 +12,6 @@ public partial class Form1 : Form
     IList<DailyCalc> _avgdata = new List<DailyCalc>();
     public Form1()
     {
-        //_context.Database.EnsureCreated(); //Skapar dbn när programmet startar
         InitializeComponent();
     }
     private void btnnewAVG_Click(object sender, EventArgs e)
