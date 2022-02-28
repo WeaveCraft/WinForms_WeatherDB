@@ -45,7 +45,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDateTimePicker = new System.Windows.Forms.Button();
             this.btnnewAVG = new System.Windows.Forms.Button();
-            this.outsideForm = new System.Windows.Forms.ListView();
             this.btnMeteoro = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnMoldRisk = new System.Windows.Forms.Button();
@@ -60,6 +59,10 @@
             this.mouldRiskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelWinter = new System.Windows.Forms.Label();
             this.labelAutumn = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.weatherDailyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.averageTemperatureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouldRiskBindingSource1)).BeginInit();
@@ -68,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.avgTempAndHumidityBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avgTempAndHumidityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouldRiskBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weatherDailyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateDataGridViewTextBoxColumn
@@ -159,9 +164,9 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.dataGridView3);
             this.panel1.Controls.Add(this.btnDateTimePicker);
             this.panel1.Controls.Add(this.btnnewAVG);
-            this.panel1.Controls.Add(this.outsideForm);
             this.panel1.Controls.Add(this.btnMeteoro);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
@@ -189,17 +194,6 @@
             this.btnnewAVG.Text = "Get Data To Database";
             this.btnnewAVG.UseVisualStyleBackColor = true;
             this.btnnewAVG.Click += new System.EventHandler(this.btnnewAVG_Click);
-            // 
-            // outsideForm
-            // 
-            this.outsideForm.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.outsideForm.Location = new System.Drawing.Point(3, 128);
-            this.outsideForm.Name = "outsideForm";
-            this.outsideForm.Size = new System.Drawing.Size(210, 97);
-            this.outsideForm.TabIndex = 12;
-            this.outsideForm.UseCompatibleStateImageBehavior = false;
-            this.outsideForm.View = System.Windows.Forms.View.Details;
-            this.outsideForm.SelectedIndexChanged += new System.EventHandler(this.outsideForm_SelectedIndexChanged);
             // 
             // btnMeteoro
             // 
@@ -310,6 +304,37 @@
             this.labelAutumn.Size = new System.Drawing.Size(0, 15);
             this.labelAutumn.TabIndex = 18;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.averageTemperatureDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn1});
+            this.dataGridView3.DataSource = this.weatherDailyBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 128);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(219, 150);
+            this.dataGridView3.TabIndex = 22;
+            // 
+            // weatherDailyBindingSource
+            // 
+            this.weatherDailyBindingSource.DataSource = typeof(Magic_Astronauts.DataAccess.Models.WeatherDaily);
+            // 
+            // averageTemperatureDataGridViewTextBoxColumn
+            // 
+            this.averageTemperatureDataGridViewTextBoxColumn.DataPropertyName = "AverageTemperature";
+            this.averageTemperatureDataGridViewTextBoxColumn.HeaderText = "AverageTemperature";
+            this.averageTemperatureDataGridViewTextBoxColumn.Name = "averageTemperatureDataGridViewTextBoxColumn";
+            // 
+            // locationDataGridViewTextBoxColumn1
+            // 
+            this.locationDataGridViewTextBoxColumn1.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn1.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn1.Name = "locationDataGridViewTextBoxColumn1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -334,6 +359,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.avgTempAndHumidityBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avgTempAndHumidityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mouldRiskBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weatherDailyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,11 +394,14 @@
         private BindingSource avgTempAndHumidityBindingSource1;
         private BindingSource mouldRiskBindingSource;
         private Button btnMoldRisk;
-        private ListView outsideForm;
         private DateTimePicker dateTimePicker1;
         private Label labelWinter;
         private Label labelAutumn;
         private Button btnMeteoro;
         private Button btnDateTimePicker;
+        private DataGridView dataGridView3;
+        private DataGridViewTextBoxColumn averageTemperatureDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn1;
+        private BindingSource weatherDailyBindingSource;
     }
 }

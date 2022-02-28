@@ -88,11 +88,15 @@ private void btnMeteoro_Click(object sender, EventArgs e)
 
     private void btnDateTimePicker_Click(object sender, EventArgs e)
     {
-        // This should display average temp & hum from a selected day by user. Via dateTimePicker.
-    }
+        var sqlQuery = "SELECT AverageTemperature, Location FROM WeatherDailies WHERE SelectDate = '" + dateTimePicker1.Value + "'";
 
-    private void outsideForm_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        //The selected day should be displayed here.
+        var connection = new SqlConnection(@"Data Source =(localdb)\MSSQLLocalDB;Initial Catalog=MagicAstronauts;Trusted_connection=True;");
+        var dataAdapter = new SqlDataAdapter(sqlQuery, connection);
+
+        var commandBuilder = new SqlCommandBuilder(dataAdapter);
+        var dbData = new DataSet();
+        dataAdapter.Fill(dbData);
+        dataGridView3.ReadOnly = true;
+        dataGridView3.DataSource = dbData.Tables[0];
     }
 }
