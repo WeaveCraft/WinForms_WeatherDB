@@ -3,7 +3,7 @@
 Kurs i Arkitektur av applikationer i .NET C#
 2022-01-23 -> 2022-02-27
 
-Projekt VäderData
+Projekt VäderData.
 
 Projektet är en applikation som, utifrån befintlig temepratur och luftighetsdata kan söka, sortera och dra slutsatser.
 
