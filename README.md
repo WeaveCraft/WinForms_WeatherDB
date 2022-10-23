@@ -52,3 +52,5 @@ Andra krav
 1. Core, där all logik bor
 2. UI, för användargränssnitt
 3. DataAccess för dataåtkomst
+
+![Screenshot 2022-10-23 125515](https://user-images.githubusercontent.com/90194213/197388172-85703819-7559-48b6-98a3-c242cb4581ca.png)
